@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shruti's Art</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <style>
+    .brand-font {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    /* Moving background animation */
+    @keyframes moveBackground {
+      from { background-position: center top; }
+      to { background-position: center bottom; }
+    }
+
+    /* Fade & slide in for text */
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero {
+      animation: moveBackground 15s ease-in-out infinite alternate;
+    }
+
+    .hero h1 {
+      opacity: 0;
+      animation: fadeSlideIn 1.5s ease-out forwards;
+    }
+
+    .hero p {
+      opacity: 0;
+      animation: fadeSlideIn 1.5s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    .hero a {
+      opacity: 0;
+      animation: fadeSlideIn 1.5s ease-out forwards;
+      animation-delay: 1s;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Shruti's Art</h1>
+      <nav class="space-x-6">
+        <a href="#home" class="hover:underline">Home</a>
+        <a href="#gallery" class="hover:underline">Gallery</a>
+        <a href="./about.html" class="hover:underline">About</a>
+        <a href="./order.html" class="hover:underline">Book Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen w-full bg-cover bg-center hero" style="background-image: url('images/canvas-painting5.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-center">
+      <div>
+        <h1 class="text-white text-6xl brand-font mb-4">Shruti's Art</h1>
+        <p class="text-white text-lg max-w-xl mx-auto px-4">Capturing emotions in every stroke. I create coloured pencil sketches, graphite sketches, and acrylic paintings — each artwork crafted with love and detail.</p>
+        <a href="#gallery" class="mt-6 inline-block px-6 py-3 bg-white text-black font-semibold rounded shadow hover:bg-gray-100 transition">Explore Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Teaser Section -->
+  <section id="gallery" class="py-16 px-6 bg-gray-50">
+    <h2 class="text-3xl text-center font-bold mb-10">Artwork Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Acrylic Gallery -->
+      <a href="acrylic-gallery.html" class="bg-white rounded shadow hover:shadow-xl overflow-hidden block transition-transform hover:scale-105">
+        <img src="images/canvas-painting2.jpg" class="w-full h-64 object-cover" alt="Acrylic Painting">
+        <p class="p-4 font-medium text-center">Acrylic Paintings</p>
+      </a>
+
+      <!-- Colored Gallery -->
+      <a href="colored-gallery.html" class="bg-white rounded shadow hover:shadow-xl overflow-hidden block transition-transform hover:scale-105">
+        <img src="images/coloured-sketch4.jpg" class="w-full h-64 object-cover" alt="Colored Sketch">
+        <p class="p-4 font-medium text-center">Colored Pencil Sketches</p>
+      </a>
+
+      <!-- Graphite Gallery -->
+      <a href="graphite-gallery.html" class="bg-white rounded shadow hover:shadow-xl overflow-hidden block transition-transform hover:scale-105">
+        <img src="images/graphite-sketch5.jpg" class="w-full h-64 object-cover" alt="Graphite Sketch">
+        <p class="p-4 font-medium text-center">Graphite Sketches</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Price Chart Section -->
+  <section id="pricing" class="py-16 px-6 bg-white">
+    <h2 class="text-3xl text-center font-bold mb-10">Price Chart</h2>
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Graphite Sketch -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
+        <h3 class="text-xl font-semibold mb-4">✏️ Graphite Sketch</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>👤 Single Person: ₹500</li>
+          <li>👥 Two Person: ₹1000</li>
+        </ul>
+      </div>
+
+      <!-- Colored Sketch -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
+        <h3 class="text-xl font-semibold mb-4">🖍️ Colored Sketch</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>👤 Single Person: ₹600</li>
+          <li>👥 Two Person: ₹1200</li>
+        </ul>
+      </div>
+
+      <!-- Acrylic Paintings -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition md:col-span-2">
+        <h3 class="text-xl font-semibold mb-4">🎨 Acrylic Paintings</h3>
+        <p class="text-gray-700">Prices vary according to size, concept & client requirements. Please <a href="./order.html" class="text-indigo-600 hover:underline">contact me</a> for a custom quote.</p>
+      </div>
+    </div>
+
+    <p class="text-center text-sm text-gray-500 mt-8 italic">
+      * Framing charges are <strong>not included</strong> in the above pricing.
+    </p>
+  </section>
+
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/917038233709?text=Hi%20Shruti!%20I%20have%20a%20question%20about%20your%20art."
+    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 z-50"
+    target="_blank"
+  >
+    <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp" />
+    Ask about custom art
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 text-center text-gray-600 mt-10">
+    © 2025 Shruti's Art | Follow me on <a alt="Instagram" href="https://www.instagram.com/blxe.artzy/" class="text-indigo-600 hover:underline">Instagram</a>
+  </footer>
+
+</body>
+</html>

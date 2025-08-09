@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Shruti's Art</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    .brand-font {
+      font-family: 'Great Vibes', cursive;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold brand-font">Shruti's Art</h1>
+      <nav class="space-x-6">
+         <a href="index.html" class="hover:underline">Home</a>
+        <a href="index.html#gallery" class="hover:underline">Gallery</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="order.html" class="hover:underline">Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with Artist Image -->
+  <section class="relative w-full h-screen pt-20 bg-black text-white">
+    <img src="images/artist-shruti.jpg" alt="Artist at work" class="w-full h-full object-cover opacity-70 absolute inset-0 z-0">
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 animate-fade-in">
+      <h1 class="text-6xl brand-font mb-4">Meet the Artist</h1>
+      <p class="text-lg max-w-3xl">Hi! I'm Shruti — a passionate artist who breathes life into colors and sketches. My world revolves around creativity, emotion, and storytelling through art. Whether it's a graphite pencil sketch, vibrant colored pencil work, or an expressive acrylic painting, each piece holds a story close to my heart.</p>
+    </div>
+  </section>
+
+  <!-- About Details Section -->
+  <section class="py-20 px-6 bg-white animate-slide-up">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-semibold mb-4">My Creative Journey</h2>
+        <p class="text-lg leading-relaxed">
+          From childhood doodles to commissioned masterpieces, my journey has been a blend of passion, learning, and soulful expression. I specialize in:
+        </p>
+        <ul class="list-disc list-inside mt-4 text-lg">
+          <li> Acrylic Paintings on canvas</li>
+          <li> Colored Pencil Sketches</li>
+          <li> Graphite Portraits</li>
+          <li> Crafting</li>
+          <li> Wall Paintings</li>
+        </ul>
+        <p class="mt-4 text-lg">Every artwork I create is an extension of emotion and devotion — made with love, for people who truly appreciate the beauty in detail.</p>
+      </div>
+      <div>
+        <img src="images/artist-shruti2.jpg" alt="Shruti painting" class="rounded-lg shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 text-center text-gray-600 mt-10">
+    © 2025 Shruti's Art | Follow me on <a href="https://instagram.com" class="text-indigo-600 hover:underline">Instagram</a>
+  </footer>
+</body>
+</html>

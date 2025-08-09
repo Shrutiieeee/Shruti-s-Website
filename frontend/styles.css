@@ -1,0 +1,138 @@
+/** styles.css **/
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff8f2;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #c97c5d;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 20px 40px;
+  background: linear-gradient(to bottom, #fff2e6, #fce5d2);
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+.scroll-arrow {
+  font-size: 2rem;
+  text-align: center;
+  animation: bounce 2s infinite;
+  color: #c97c5d;
+  margin-bottom: 30px;
+}
+
+/* Gallery */
+section {
+  padding: 40px 20px;
+}
+
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  animation: fadeInUp 1.2s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about-artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  animation: fadeIn 2s ease;
+}
+
+.about-artist img {
+  width: 220px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bio {
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #c97c5d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-artist {
+    flex-direction: column;
+  }
+  .card {
+    width: 90%;
+  }
+}

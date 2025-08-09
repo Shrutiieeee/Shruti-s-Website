@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colored Sketches - Shruti's Art</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="min-h-screen text-gray-900 bg-gradient-to-b from-white to-gray-100">
+
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold text-center mb-4" data-aos="fade-down">Colored Pencil Sketches</h1>
+    <p class="text-center text-gray-600 mb-10" data-aos="fade-up">Delicate colored pencil artwork with vibrant tones.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded shadow hover:shadow-lg p-2 cursor-pointer" data-aos="zoom-in">
+        <img src="images/coloured-sketch2.jpg" class="rounded w-full h-64 object-cover" onclick="openModal('images/coloured-sketch2.jpg')" />
+        <p class="text-sm mt-2 text-center">Commissioned Art</p>
+      </div>
+      <div class="bg-white rounded shadow hover:shadow-lg p-2 cursor-pointer" data-aos="zoom-in">
+        <img src="images/coloured-sketch3.jpg" class="rounded w-full h-64 object-cover" onclick="openModal('images/coloured-sketch3.jpg')" />
+        <p class="text-sm mt-2 text-center">Commissioned Art</p>
+      </div>
+      <div class="bg-white rounded shadow hover:shadow-lg p-2 cursor-pointer" data-aos="zoom-in">
+        <img src="images/coloured-sketch4.jpg" class="rounded w-full h-64 object-cover" onclick="openModal('images/coloured-sketch4.jpg')" />
+        <p class="text-sm mt-2 text-center">Commissioned Art</p>
+      </div>
+      <div class="bg-white rounded shadow hover:shadow-lg p-2 cursor-pointer" data-aos="zoom-in">
+        <img src="images/coloured-sketch5.jpg" class="rounded w-full h-64 object-cover" onclick="openModal('images/coloured-sketch5.jpg')" />
+        <p class="text-sm mt-2 text-center">Commissioned Art</p>
+      </div>
+      <div class="bg-white rounded shadow hover:shadow-lg p-2 cursor-pointer" data-aos="zoom-in">
+        <img src="images/coloured-sketch6.jpg" class="rounded w-full h-64 object-cover" onclick="openModal('images/coloured-sketch6.jpg')" />
+        <p class="text-sm mt-2 text-center">Commissioned Art</p>
+      </div>
+      <div class="bg-white rounded shadow hover:shadow-lg p-2 cursor-pointer" data-aos="zoom-in">
+        <img src="images/coloured-sketch7.jpg" class="rounded w-full h-64 object-cover" onclick="openModal('images/coloured-sketch7.jpg')" />
+        <p class="text-sm mt-2 text-center">Commissioned Art</p>
+      </div>
+      <div class="bg-white rounded shadow hover:shadow-lg p-2 cursor-pointer" data-aos="zoom-in">
+        <img src="images/coloured-sketch8.jpg" class="rounded w-full h-64 object-cover" onclick="openModal('images/coloured-sketch8.jpg')" />
+        <p class="text-sm mt-2 text-center">Commissioned Art</p>
+      </div>
+      <div class="bg-white rounded shadow hover:shadow-lg p-2 cursor-pointer" data-aos="zoom-in">
+        <img src="images/coloured-sketch9.jpg" class="rounded w-full h-64 object-cover" onclick="openModal('images/coloured-sketch9.jpg')" />
+        <p class="text-sm mt-2 text-center">Commissioned Art</p>
+      </div>
+      <div class="bg-white rounded shadow hover:shadow-lg p-2 cursor-pointer" data-aos="zoom-in">
+        <img src="images/coloured-sketch10.jpg" class="rounded w-full h-64 object-cover" onclick="openModal('images/coloured-sketch10.jpg')" />
+        <p class="text-sm mt-2 text-center">Commissioned Art</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="index.html#gallery" class="text-indigo-600 hover:underline">&larr; Back to Gallery</a>
+    </div>
+  </div>
+
+  <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-80 flex items-center justify-center">
+    <span class="absolute top-4 right-6 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+    <img id="modalImg" src="" class="max-h-[90vh] max-w-[90vw] rounded border-4 border-white" />
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function openModal(src) {
+      document.getElementById("modalImg").src = src;
+      document.getElementById("imageModal").classList.remove("hidden");
+    }
+    function closeModal() {
+      document.getElementById("imageModal").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
