@@ -18,6 +18,7 @@ app.use('/uploads', express.static('uploads'));
 // ✅ Middleware
 app.use(cors({
   origin: 'http://localhost:5500', // or wherever you're serving frontend
+  'https://shruti-s-website-front.vercel.app' // ✅ replace with your real Vercel URL
   credentials: true // allow cookies for session
 }));
 app.use(express.json());
@@ -155,4 +156,5 @@ app.listen(PORT, () => {
 
 /*// ✅ Serve static HTML/CSS/JS from public folder
 const path = require('path');
+
 app.use(express.static(path.join(__dirname, '../frontend')));*/
